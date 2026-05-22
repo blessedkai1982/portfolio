@@ -86,38 +86,38 @@ body{font-family:var(--font);background:var(--paper);color:var(--ink);min-height
 .ac-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
 .tw .ac-dot{background:var(--tw-a)}.sub .ac-dot{background:var(--sub-a)}.us .ac-dot{background:var(--us-a)}
 .ac-cur{font-size:10px;font-family:var(--mono);color:var(--ink-3);background:var(--paper-2);padding:1px 6px;border-radius:20px}
-.ac-total{font-family:var(--mono);font-size:20px;font-weight:500;letter-spacing:-.02em;line-height:1;margin-bottom:3px}
+.ac-total{font-family:var(--mono);font-size:26px;font-weight:500;letter-spacing:-.02em;line-height:1;margin-bottom:4px}
 .ac-twd{font-size:11px;color:var(--ink-3);margin-bottom:8px}
 .ac-pnl{display:flex;gap:8px}
 .pi{flex:1;min-width:0}
 .pi-label{font-size:9px;color:var(--ink-4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px}
-.pi-val{font-family:var(--mono);font-size:12px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pi-val{font-family:var(--mono);font-size:13px;font-weight:500}
 .pi-pct{font-size:10px;margin-top:1px}
 .ac-bar{height:2px;background:var(--paper-3);border-radius:2px;margin-top:10px;overflow:hidden}
 .ac-bar-fill{height:100%;border-radius:2px;transition:width .6s ease}
 .tw .ac-bar-fill{background:var(--tw-a)}.sub .ac-bar-fill{background:var(--sub-a)}.us .ac-bar-fill{background:var(--us-a)}
 
 /* ── PERF ROW ── */
-.perf-row{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:1rem}
-.pcard{background:var(--paper);border:.5px solid var(--rule-2);border-radius:var(--r-lg);padding:.85rem;box-shadow:var(--shadow)}
-.plabel{font-size:10px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}
-.pval{font-family:var(--mono);font-size:18px;font-weight:500}
+.perf-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1rem}
+.pcard{background:var(--paper);border:.5px solid var(--rule-2);border-radius:var(--r-lg);padding:1rem;box-shadow:var(--shadow)}
+.plabel{font-size:11px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.pval{font-family:var(--mono);font-size:20px;font-weight:500}
 .psub{font-size:11px;color:var(--ink-3);margin-top:3px}
 
 /* ── CHARTS ── */
-.mid-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1rem}
-.chart-full{grid-column:1/-1}
-.card{background:var(--paper);border:.5px solid var(--rule-2);border-radius:var(--r-lg);padding:1rem;box-shadow:var(--shadow)}
-.ctitle{font-size:10px;font-weight:500;color:var(--ink-3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.85rem}
-.cwrap{position:relative;width:100%;height:160px}
+.mid-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:1rem}
+.card{background:var(--paper);border:.5px solid var(--rule-2);border-radius:var(--r-lg);padding:1.25rem;box-shadow:var(--shadow)}
+.ctitle{font-size:11px;font-weight:500;color:var(--ink-3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:1rem}
+.cwrap{position:relative;width:100%;height:180px}
 
 /* ── HOLDINGS TABLE ── */
 .hcard{background:var(--paper);border:.5px solid var(--rule-2);border-radius:var(--r-lg);box-shadow:var(--shadow);margin-bottom:1rem;overflow:hidden}
-.hhdr{padding:.85rem 1rem;border-bottom:.5px solid var(--rule);display:flex;align-items:center;gap:8px;flex-wrap:wrap;gap:6px}
+.hhdr{padding:1rem 1.25rem;border-bottom:.5px solid var(--rule);display:flex;align-items:center;gap:12px}
 .tab-btns{display:flex;gap:4px;margin-left:auto}
-.tbtn{padding:4px 10px;border-radius:20px;font-size:11px;font-weight:500;border:.5px solid var(--rule-2);cursor:pointer;background:transparent;color:var(--ink-3);font-family:var(--font);transition:all .15s;-webkit-tap-highlight-color:transparent}
+.tbtn{padding:4px 12px;border-radius:20px;font-size:12px;font-weight:500;border:.5px solid var(--rule-2);cursor:pointer;background:transparent;color:var(--ink-3);font-family:var(--font);transition:all .15s;-webkit-tap-highlight-color:transparent}
 .tbtn.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.add-btn{padding:6px 12px;border-radius:var(--r);font-size:12px;font-weight:500;border:.5px solid var(--rule-2);cursor:pointer;background:var(--ink);color:var(--paper);font-family:var(--font);display:inline-flex;align-items:center;gap:4px;-webkit-tap-highlight-color:transparent}
+.add-btn{padding:5px 14px;border-radius:var(--r);font-size:12px;font-weight:500;border:.5px solid var(--rule-2);cursor:pointer;background:var(--paper-2);color:var(--ink-2);font-family:var(--font);display:inline-flex;align-items:center;gap:4px}
+.add-btn:hover{background:var(--paper-3)}
 
 /* Mobile holdings: card view instead of table */
 .holding-cards{display:flex;flex-direction:column;gap:0}
@@ -303,8 +303,8 @@ body{font-family:var(--font);background:var(--paper);color:var(--ink);min-height
 
   <div class="mid-row">
     <div class="card"><div class="ctitle">▪ 帳號資產分配</div><div class="cwrap"><canvas id="cPie"></canvas></div></div>
-    <div class="card chart-full"><div class="ctitle">▪ 持倉分佈（台幣）</div><div class="cwrap"><canvas id="cBar"></canvas></div></div>
-    <div class="card chart-full"><div class="ctitle">▪ 損益概覽（未實現）</div><div class="cwrap"><canvas id="cPnl"></canvas></div></div>
+    <div class="card"><div class="ctitle">▪ 持倉分佈（台幣）</div><div class="cwrap"><canvas id="cBar"></canvas></div></div>
+    <div class="card"><div class="ctitle">▪ 損益概覽（未實現）</div><div class="cwrap"><canvas id="cPnl"></canvas></div></div>
   </div>
 
   <div class="hcard">
